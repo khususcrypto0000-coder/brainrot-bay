@@ -1,0 +1,791 @@
+{
+  "name": "brainrot-bay",
+  "tree": {
+    "$className": "DataModel",
+    "Players": {
+      "$properties": {
+        "CharacterAutoLoads": true
+      }
+    },
+    "ServerScriptService": {
+      "Server": {
+        "$path": "src/server"
+      }
+    },
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/shared"
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+          "$path": "src/client"
+        }
+      }
+    },
+    "Workspace": {
+      "$properties": {
+        "FilteringEnabled": true
+      },
+      "Baseplate": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [0.35, 0.6, 0.3],
+          "Locked": true,
+          "Material": "Grass",
+          "Position": [0, -10, 0],
+          "Size": [512, 20, 512],
+          "TopSurface": "Smooth"
+        }
+      },
+      "BeltBase": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [0.25, 0.25, 0.28],
+          "Material": "SmoothPlastic",
+          "Position": [-30, 0.5, 0],
+          "Size": [10, 1, 180],
+          "TopSurface": "Smooth"
+        }
+      },
+      "BeltStripe1": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [1, 0.8, 0.2],
+          "Material": "SmoothPlastic",
+          "Position": [-30, 1.05, -75],
+          "Size": [10, 0.2, 4],
+          "TopSurface": "Smooth"
+        }
+      },
+      "BeltStripe2": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [1, 0.8, 0.2],
+          "Material": "SmoothPlastic",
+          "Position": [-30, 1.05, -45],
+          "Size": [10, 0.2, 4],
+          "TopSurface": "Smooth"
+        }
+      },
+      "BeltStripe3": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [1, 0.8, 0.2],
+          "Material": "SmoothPlastic",
+          "Position": [-30, 1.05, -15],
+          "Size": [10, 0.2, 4],
+          "TopSurface": "Smooth"
+        }
+      },
+      "BeltStripe4": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [1, 0.8, 0.2],
+          "Material": "SmoothPlastic",
+          "Position": [-30, 1.05, 15],
+          "Size": [10, 0.2, 4],
+          "TopSurface": "Smooth"
+        }
+      },
+      "BeltStripe5": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [1, 0.8, 0.2],
+          "Material": "SmoothPlastic",
+          "Position": [-30, 1.05, 45],
+          "Size": [10, 0.2, 4],
+          "TopSurface": "Smooth"
+        }
+      },
+      "BeltStripe6": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [1, 0.8, 0.2],
+          "Material": "SmoothPlastic",
+          "Position": [-30, 1.05, 75],
+          "Size": [10, 0.2, 4],
+          "TopSurface": "Smooth"
+        }
+      },
+      "BeltRailLeft": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [0.8, 0.1, 0.1],
+          "Material": "SmoothPlastic",
+          "Position": [-35.5, 1.5, 0],
+          "Size": [1, 2, 180],
+          "TopSurface": "Smooth"
+        }
+      },
+      "BeltRailRight": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [0.8, 0.1, 0.1],
+          "Material": "SmoothPlastic",
+          "Position": [-24.5, 1.5, 0],
+          "Size": [1, 2, 180],
+          "TopSurface": "Smooth"
+        }
+      },
+      "SpawnPad": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [0.2, 0.9, 0.3],
+          "Material": "Neon",
+          "Position": [-30, 0.5, -96],
+          "Size": [12, 1, 12],
+          "TopSurface": "Smooth"
+        }
+      },
+      "DespawnPad": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [0.9, 0.2, 0.2],
+          "Material": "Neon",
+          "Position": [-30, 0.5, 96],
+          "Size": [12, 1, 12],
+          "TopSurface": "Smooth"
+        }
+      },
+      "Base1Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [1, 0.6667, 0.6667],
+          "Material": "SmoothPlastic",
+          "Position": [35, 0.5, -75],
+          "Size": [26, 1, 26],
+          "TopSurface": "Smooth"
+        }
+      },
+      "Base1Slot1": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, -81], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base1Slot2": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, -81], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base1Slot3": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, -69], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base1Slot4": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, -69], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base1SignPole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [46, 4, -86], "Size": [1, 8, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Sign1": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.1, 0.1, 0.15], "Material": "SmoothPlastic",
+          "Position": [46, 8, -86], "Size": [9, 4, 0.5], "TopSurface": "Smooth"
+        }
+      },
+      "LockLight1": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.31, 1, 0.47], "Material": "Neon",
+          "Position": [25, 1.2, -65], "Size": [4, 1, 4], "TopSurface": "Smooth"
+        }
+      },
+      "Base2Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [1, 0.8627, 0.5098],
+          "Material": "SmoothPlastic",
+          "Position": [35, 0.5, -45],
+          "Size": [26, 1, 26],
+          "TopSurface": "Smooth"
+        }
+      },
+      "Base2Slot1": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, -51], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base2Slot2": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, -51], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base2Slot3": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, -39], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base2Slot4": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, -39], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base2SignPole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [46, 4, -56], "Size": [1, 8, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Sign2": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.1, 0.1, 0.15], "Material": "SmoothPlastic",
+          "Position": [46, 8, -56], "Size": [9, 4, 0.5], "TopSurface": "Smooth"
+        }
+      },
+      "LockLight2": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.31, 1, 0.47], "Material": "Neon",
+          "Position": [25, 1.2, -35], "Size": [4, 1, 4], "TopSurface": "Smooth"
+        }
+      },
+      "Base3Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [0.6667, 0.902, 0.6667],
+          "Material": "SmoothPlastic",
+          "Position": [35, 0.5, -15],
+          "Size": [26, 1, 26],
+          "TopSurface": "Smooth"
+        }
+      },
+      "Base3Slot1": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, -21], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base3Slot2": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, -21], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base3Slot3": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, -9], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base3Slot4": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, -9], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base3SignPole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [46, 4, -26], "Size": [1, 8, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Sign3": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.1, 0.1, 0.15], "Material": "SmoothPlastic",
+          "Position": [46, 8, -26], "Size": [9, 4, 0.5], "TopSurface": "Smooth"
+        }
+      },
+      "LockLight3": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.31, 1, 0.47], "Material": "Neon",
+          "Position": [25, 1.2, -5], "Size": [4, 1, 4], "TopSurface": "Smooth"
+        }
+      },
+      "Base4Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [0.5882, 0.7843, 1],
+          "Material": "SmoothPlastic",
+          "Position": [35, 0.5, 15],
+          "Size": [26, 1, 26],
+          "TopSurface": "Smooth"
+        }
+      },
+      "Base4Slot1": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, 9], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base4Slot2": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, 9], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base4Slot3": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, 21], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base4Slot4": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, 21], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base4SignPole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [46, 4, 4], "Size": [1, 8, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Sign4": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.1, 0.1, 0.15], "Material": "SmoothPlastic",
+          "Position": [46, 8, 4], "Size": [9, 4, 0.5], "TopSurface": "Smooth"
+        }
+      },
+      "LockLight4": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.31, 1, 0.47], "Material": "Neon",
+          "Position": [25, 1.2, 25], "Size": [4, 1, 4], "TopSurface": "Smooth"
+        }
+      },
+      "Base5Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [0.8627, 0.6667, 1],
+          "Material": "SmoothPlastic",
+          "Position": [35, 0.5, 45],
+          "Size": [26, 1, 26],
+          "TopSurface": "Smooth"
+        }
+      },
+      "Base5Slot1": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, 39], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base5Slot2": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, 39], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base5Slot3": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, 51], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base5Slot4": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, 51], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base5SignPole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [46, 4, 34], "Size": [1, 8, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Sign5": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.1, 0.1, 0.15], "Material": "SmoothPlastic",
+          "Position": [46, 8, 34], "Size": [9, 4, 0.5], "TopSurface": "Smooth"
+        }
+      },
+      "LockLight5": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.31, 1, 0.47], "Material": "Neon",
+          "Position": [25, 1.2, 55], "Size": [4, 1, 4], "TopSurface": "Smooth"
+        }
+      },
+      "Base6Platform": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [1, 0.7451, 0.8627],
+          "Material": "SmoothPlastic",
+          "Position": [35, 0.5, 75],
+          "Size": [26, 1, 26],
+          "TopSurface": "Smooth"
+        }
+      },
+      "Base6Slot1": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, 69], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base6Slot2": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, 69], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base6Slot3": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [29, 1.1, 81], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base6Slot4": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [41, 1.1, 81], "Size": [8, 0.4, 8], "TopSurface": "Smooth"
+        }
+      },
+      "Base6SignPole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [46, 4, 64], "Size": [1, 8, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Sign6": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.1, 0.1, 0.15], "Material": "SmoothPlastic",
+          "Position": [46, 8, 64], "Size": [9, 4, 0.5], "TopSurface": "Smooth"
+        }
+      },
+      "LockLight6": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.31, 1, 0.47], "Material": "Neon",
+          "Position": [25, 1.2, 85], "Size": [4, 1, 4], "TopSurface": "Smooth"
+        }
+      },
+      "SpawnLocation": {
+        "$className": "SpawnLocation",
+        "$properties": {
+          "Anchored": true,
+          "Color": [0.2, 0.8, 0.4],
+          "Duration": 0,
+          "Neutral": true,
+          "Position": [0, 0.5, 105],
+          "Size": [16, 1, 16],
+          "TopSurface": "Smooth"
+        }
+      },
+      "Tree1Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.5, 0.35, 0.2], "Material": "SmoothPlastic",
+          "Position": [-80, 3, -100], "Size": [2, 6, 2], "TopSurface": "Smooth"
+        }
+      },
+      "Tree1Leaves": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.25, 0.55, 0.25], "Material": "SmoothPlastic",
+          "Position": [-80, 8, -100], "Shape": "Ball", "Size": [9, 9, 9], "TopSurface": "Smooth"
+        }
+      },
+      "Tree2Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.5, 0.35, 0.2], "Material": "SmoothPlastic",
+          "Position": [-80, 3, 100], "Size": [2, 6, 2], "TopSurface": "Smooth"
+        }
+      },
+      "Tree2Leaves": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.25, 0.55, 0.25], "Material": "SmoothPlastic",
+          "Position": [-80, 8, 100], "Shape": "Ball", "Size": [9, 9, 9], "TopSurface": "Smooth"
+        }
+      },
+      "Tree3Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.5, 0.35, 0.2], "Material": "SmoothPlastic",
+          "Position": [80, 3, -100], "Size": [2, 6, 2], "TopSurface": "Smooth"
+        }
+      },
+      "Tree3Leaves": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.25, 0.55, 0.25], "Material": "SmoothPlastic",
+          "Position": [80, 8, -100], "Shape": "Ball", "Size": [9, 9, 9], "TopSurface": "Smooth"
+        }
+      },
+      "Tree4Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.5, 0.35, 0.2], "Material": "SmoothPlastic",
+          "Position": [80, 3, 100], "Size": [2, 6, 2], "TopSurface": "Smooth"
+        }
+      },
+      "Tree4Leaves": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.25, 0.55, 0.25], "Material": "SmoothPlastic",
+          "Position": [80, 8, 100], "Shape": "Ball", "Size": [9, 9, 9], "TopSurface": "Smooth"
+        }
+      },
+      "Tree5Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.5, 0.35, 0.2], "Material": "SmoothPlastic",
+          "Position": [-100, 3, 0], "Size": [2, 6, 2], "TopSurface": "Smooth"
+        }
+      },
+      "Tree5Leaves": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.25, 0.55, 0.25], "Material": "SmoothPlastic",
+          "Position": [-100, 8, 0], "Shape": "Ball", "Size": [9, 9, 9], "TopSurface": "Smooth"
+        }
+      },
+      "Tree6Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.5, 0.35, 0.2], "Material": "SmoothPlastic",
+          "Position": [100, 3, -60], "Size": [2, 6, 2], "TopSurface": "Smooth"
+        }
+      },
+      "Tree6Leaves": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.25, 0.55, 0.25], "Material": "SmoothPlastic",
+          "Position": [100, 8, -60], "Shape": "Ball", "Size": [9, 9, 9], "TopSurface": "Smooth"
+        }
+      },
+      "Tree7Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.5, 0.35, 0.2], "Material": "SmoothPlastic",
+          "Position": [100, 3, 60], "Size": [2, 6, 2], "TopSurface": "Smooth"
+        }
+      },
+      "Tree7Leaves": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.25, 0.55, 0.25], "Material": "SmoothPlastic",
+          "Position": [100, 8, 60], "Shape": "Ball", "Size": [9, 9, 9], "TopSurface": "Smooth"
+        }
+      },
+      "Tree8Trunk": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.5, 0.35, 0.2], "Material": "SmoothPlastic",
+          "Position": [-70, 3, 60], "Size": [2, 6, 2], "TopSurface": "Smooth"
+        }
+      },
+      "Tree8Leaves": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.25, 0.55, 0.25], "Material": "SmoothPlastic",
+          "Position": [-70, 8, 60], "Shape": "Ball", "Size": [9, 9, 9], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp1Pole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [-18, 3, -60], "Size": [1, 6, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp1Head": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon",
+          "Position": [-18, 6.2, -60], "Size": [3, 1, 3], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp2Pole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [-18, 3, -30], "Size": [1, 6, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp2Head": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon",
+          "Position": [-18, 6.2, -30], "Size": [3, 1, 3], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp3Pole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [-18, 3, 0], "Size": [1, 6, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp3Head": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon",
+          "Position": [-18, 6.2, 0], "Size": [3, 1, 3], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp4Pole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [-18, 3, 30], "Size": [1, 6, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp4Head": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon",
+          "Position": [-18, 6.2, 30], "Size": [3, 1, 3], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp5Pole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [-18, 3, 60], "Size": [1, 6, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp5Head": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon",
+          "Position": [-18, 6.2, 60], "Size": [3, 1, 3], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp6Pole": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.2, 0.2], "Material": "SmoothPlastic",
+          "Position": [18, 3, 0], "Size": [1, 6, 1], "TopSurface": "Smooth"
+        }
+      },
+      "Lamp6Head": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon",
+          "Position": [18, 6.2, 0], "Size": [3, 1, 3], "TopSurface": "Smooth"
+        }
+      },
+      "FountainBase": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.6, 0.6, 0.65], "Material": "SmoothPlastic",
+          "Position": [-70, 0.5, 0], "Size": [16, 1, 16], "TopSurface": "Smooth"
+        }
+      },
+      "FountainWater": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.2, 0.6, 1], "Material": "SmoothPlastic",
+          "Position": [-70, 1.1, 0], "Size": [12, 0.6, 12], "Transparency": 0.3, "TopSurface": "Smooth"
+        }
+      },
+      "FountainPillar": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.95, 0.95, 0.95], "Material": "SmoothPlastic",
+          "Position": [-70, 3, 0], "Size": [2, 4, 2], "TopSurface": "Smooth"
+        }
+      },
+      "ArchPoleLeft": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.9, 0.3, 0.3], "Material": "SmoothPlastic",
+          "Position": [-6, 4, 98], "Size": [1, 8, 1], "TopSurface": "Smooth"
+        }
+      },
+      "ArchPoleRight": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.9, 0.3, 0.3], "Material": "SmoothPlastic",
+          "Position": [6, 4, 98], "Size": [1, 8, 1], "TopSurface": "Smooth"
+        }
+      },
+      "ArchBeam": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true, "Color": [0.9, 0.3, 0.3], "Material": "SmoothPlastic",
+          "Position": [0, 8, 98], "Size": [14, 1, 1], "TopSurface": "Smooth"
+        }
+      }
+    },
+    "Lighting": {
+      "$properties": {
+        "Ambient": [0, 0, 0],
+        "Brightness": 2,
+        "ClockTime": 14,
+        "GlobalShadows": true,
+        "Outlines": false,
+        "Technology": "Voxel"
+      }
+    },
+    "SoundService": {
+      "$properties": {
+        "RespectFilteringEnabled": true
+      }
+    }
+  }
+}
